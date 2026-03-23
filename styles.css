@@ -53,8 +53,8 @@ body {
 /* ヒーローエリア */
 .hero {
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-  padding: 120px 20px;
-  margin-bottom: 80px;
+  padding: 60px 20px;
+  margin-bottom: 50px;
   color: white;
   text-align: center;
 }
@@ -93,13 +93,13 @@ a:hover {
 
 /* セクション共通 */
 .section {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .section-title {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   color: #1a1a1a;
   padding-bottom: 12px;
   border-bottom: 3px solid #0066cc;
@@ -110,15 +110,15 @@ a:hover {
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  margin-bottom: 20px;
+  gap: 24px;
+  margin-bottom: 0;
 }
 
 .category-card {
   background-color: white;
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid #e5e5e5;
+  padding: 32px 28px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
   text-align: center;
@@ -156,6 +156,49 @@ a:hover {
   gap: 24px;
 }
 
+.article-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* カルーセル（横スクロール） */
+.carousel-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f5f5f5;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.article-list-carousel {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-item-carousel {
+  flex: 0 0 calc(20% - 16px);
+  min-width: 240px;
+}
+
 .article-item {
   background-color: white;
   padding: 20px;
@@ -174,7 +217,7 @@ a:hover {
   margin: -20px -20px 16px -20px;
   overflow: hidden;
   background-color: #f5f5f5;
-  height: 160px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,8 +391,8 @@ article {
   }
 
   .hero {
-    padding: 80px 20px;
-    margin-bottom: 60px;
+    padding: 50px 20px;
+    margin-bottom: 40px;
   }
 
   .hero-title {
@@ -357,17 +400,13 @@ article {
     margin-bottom: 20px;
   }
 
-  .hero-description {
-    font-size: 16px;
-  }
-
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .section-title {
     font-size: 26px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .category-cards {
@@ -376,12 +415,16 @@ article {
   }
 
   .category-card {
-    padding: 28px;
+    padding: 28px 24px;
   }
 
-  .article-list-top {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .article-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .article-thumbnail {
+    height: 130px;
   }
 
   .article-list-top {
@@ -465,8 +508,8 @@ article {
   }
 
   .hero {
-    padding: 60px 16px;
-    margin-bottom: 48px;
+    padding: 40px 16px;
+    margin-bottom: 35px;
   }
 
   .hero-title {
@@ -474,17 +517,28 @@ article {
     margin-bottom: 16px;
   }
 
-  .hero-description {
-    font-size: 14px;
-  }
-
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 45px;
   }
 
   .section-title {
     font-size: 24px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+  }
+
+  .category-card {
+    padding: 24px 20px;
+  }
+
+  .article-list-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .article-item-carousel {
+    flex: 0 0 calc(80% - 16px);
+    min-width: 200px;
+  }
   }
 
   .category-cards {
