@@ -756,10 +756,9 @@ article {
   animation: scroll 20s linear infinite;
 }
 
-.card {
+.slider-track > .article-item-carousel {
   width: 280px;
-  flex-shrink: 0;
-  margin-right: 16px;
+  flex: 0 0 280px;
 }
 
 /* 無限スクロール */
@@ -768,7 +767,7 @@ article {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1120px);
+    transform: translateX(-1200px);
   }
 }
 
