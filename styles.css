@@ -731,6 +731,60 @@ article {
   }
 }
 
+/* スライダー */
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: transparent;
+  padding: 12px 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  min-width: 280px;
+  margin-right: 16px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #242d3a 0%, #1a1f2a 100%);
+  color: #f0f4f8;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.46);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* アニメーション */
 @keyframes fadeInUp {
   0% {
